@@ -1,6 +1,6 @@
 {
 	"name": "rollup-plugin-window-env",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "rollup plugin to inject given environment variables into the window object.",
 	"type": "module",
 	"main": "index.js",
