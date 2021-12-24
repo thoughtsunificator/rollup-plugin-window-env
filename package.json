@@ -1,0 +1,19 @@
+{
+	"name": "rollup-plugin-window-env",
+	"version": "1.0.0",
+	"description": "rollup plugin to inject given environment variables into the window object.",
+	"type": "module",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thoughtsunificator/rollup-plugin-window-env.git"
+	},
+	"bugs": {
+		"url": "https://github.com/thoughtsunificator/rollup-plugin-window-env/issues"
+	},
+	"homepage": "https://github.com/thoughtsunificator/rollup-plugin-window-env#readme",
+	"author": "Romain Lebesle <oss@thoughtsunificator.me> (https://thoughtsunificator.me)",
+	"devDependencies": {
+		"@thoughtsunificator/config-env": "^1.0.3"
+	}
+}
