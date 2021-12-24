@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/thoughtsunificator/rollup-plugin-window-env#readme",
 	"author": "Romain Lebesle <oss@thoughtsunificator.me> (https://thoughtsunificator.me)",
-	"devDependencies": {
+	"dependencies": {
 		"@thoughtsunificator/config-env": "^1.0.3"
 	}
 }
