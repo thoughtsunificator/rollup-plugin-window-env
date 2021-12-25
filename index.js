@@ -17,9 +17,9 @@ export default function(config = {}) {
 			const config = createConfig(envPath, configPath)
 			let str = ";(function() {"
 			for(const property in config) {
-				str += `\n\twindow["${property}"] = ${JSON.stringify(config[property])}\n`
+				str += `\n\twindow["${property}"] = ${JSON.stringify(config[property])}`
 			}
-			str += "})();"
+			str += "\n})();"
 			return str
 		}
 	};
