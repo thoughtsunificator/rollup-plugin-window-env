@@ -1,6 +1,6 @@
 {
 	"name": "@thoughtsunificator/rollup-plugin-window-env",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"description": "rollup plugin to inject given environment variables into the window object.",
 	"type": "module",
 	"main": "index.js",
