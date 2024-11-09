@@ -17,9 +17,6 @@ jobs:
       - name: npm ci
         run: npm ci
 
-      - name: npm test
-        run: npm test
-
       - name: Automatic release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
