@@ -2,7 +2,7 @@ import fs from "fs"
 import { createConfig } from "@thoughtsunificator/config-env"
 
 export default function(config = {}) {
-	const { envPath = ".env.json", configPath = "data/config.json", namespace = "window" } = config
+	const { envPath = ".env.json", configPath = "data/config.json", namespace = "window", namespaceKey = null } = config
 	return {
 		name: 'rollup-env',
 		buildStart(){
@@ -16,10 +16,14 @@ export default function(config = {}) {
 		banner: () => {
 			const config = createConfig(envPath, configPath)
 			let str = ";(function() {"
-			for(const property in config) {
-				str += `\n\t${namespace}["${property}"] = ${JSON.stringify(config[property], null, "\t")}`
+			str += `if(!${namespace})globalThis["${namespace}"]={};`
+			if(namespaceKey) {
+				str += `${namespace}["${namespaceKey}"]={};`
 			}
-			str += "\n})();"
+			for(const property in config) {
+				str += `${namespace}["${property}"]=${JSON.stringify(config[property])};`
+			}
+			str += "})();"
 			return str
 		}
 	};
