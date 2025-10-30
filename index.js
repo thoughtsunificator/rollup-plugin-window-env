@@ -20,8 +20,14 @@ export default function(config = {}) {
 			if(namespaceKey) {
 				str += `${namespace}["${namespaceKey}"]={};`
 			}
+			let key = ""
+			if(namespaceKey) {
+				key = `${namespace}["${namespaceKey}"]`
+			} else {
+				key = namespace
+			}
 			for(const property in config) {
-				str += `${namespace}["${property}"]=${JSON.stringify(config[property])};`
+				str += `${key}["${property}"]=${JSON.stringify(config[property])};`
 			}
 			str += "})();"
 			return str
